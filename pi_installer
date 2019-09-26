@@ -36,13 +36,14 @@ install_docker() {
   groupadd docker
   gpasswd -a pi docker
   newgrp docker
+  curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io
 }
 
 # ------------------------------------------------------------------------------
 # Pull the Docker image
 # ------------------------------------------------------------------------------
 pull_image() {
-  echo "Pulling Docker image..."
+  echo "Pulling Docker image..."  
   docker pull wzpan/wukong-robot-arm:latest
 }
 
