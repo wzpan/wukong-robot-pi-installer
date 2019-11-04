@@ -15,7 +15,7 @@ sudo ./pi_installer
 然后使用如下命令启动 docker 镜像：
 
 ``` bash
-docker run -it -p 5000:5000 --device /dev/snd -e LANG=C.UTF-8 wzpan/wukong-robot:latest
+docker run -it -p 5000:5000 --device /dev/snd -e LANG=C.UTF-8 wzpan/wukong-robot-arm:latest
 ```
 
 完成后可以参考 [运行](https://wukong.hahack.com/#/run) 一节，启动 wukong-robot。
