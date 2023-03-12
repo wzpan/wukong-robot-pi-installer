@@ -47,6 +47,17 @@ pull_image() {
   docker pull wzpan/wukong-robot-arm:latest
 }
 
+# ------------------------------------------------------------------------------
+# Build the newest Docker image
+# ------------------------------------------------------------------------------
+build_image() {
+  echo "Cloning wukong-robot repo..."  
+  git clone https://gitee.com/wzpan/wukong-robot.git
+  cd wukong-robot
+  docker build -f docker/DockerfileArm . -t wzpan/wukong-robot:latest
+}
+
+
 # ==============================================================================
 # RUN LOGIC
 # ------------------------------------------------------------------------------
@@ -61,7 +72,8 @@ main() {
   # Install ALL THE THINGS!
   install_requirements
   install_docker
-  pull_image
+  #pull_image
+  build_image
   exit 0
 }
 main
