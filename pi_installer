@@ -54,7 +54,7 @@ build_image() {
   echo "Cloning wukong-robot repo..."  
   git clone https://gitee.com/wzpan/wukong-robot.git
   cd wukong-robot
-  docker build -f docker/DockerfileArm . -t wzpan/wukong-robot:latest
+  docker build -f docker/DockerfileArm . -t wzpan/wukong-robot-arm:latest
 }
 
 
